@@ -1,0 +1,1282 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@import url('http://fonts.cdnfonts.com/css/holimount-swash?styles=53644');
+
+:root{
+    --gradient: linear-gradient(to right, #833ab4, #fd1d1d, #fcb845);
+}
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+a {
+    text-decoration: none;  
+}
+
+section{
+    padding: 2em 1em;
+}
+
+
+
+
+
+header{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    padding: 2px 94px;
+    align-items: center;    
+    text-align: center;
+    justify-content: space-between;
+}
+
+.dropdown{
+    width: 5rem;
+    position: relative;
+    left: 100%;
+    margin-top: 15px;
+}
+
+.dropdown:hover .dropdown-list{
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-select a{
+    color: rgb(172, 172, 172);
+    font-size: 1.6rem;
+    transition: 0.6s;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    align-items: center;
+    justify-content:space-between;
+}
+
+
+.dropdown-select:hover{
+    color: white;
+    transform: scale(1.1);
+}
+
+.dropdown-list{
+    border-radius: 5px;
+    background-color: white;
+    position:absolute;
+    top:110%;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: obacity 0.2s linear, visibility 0.2s linear;
+}
+
+.dropdown-list-item a{
+    padding: 2px 10px;
+    color: rgb(146, 141, 141);
+    font-size: 11px;
+    font-weight:bold;
+}
+
+.dropdown-list-item a:hover{
+    color: black;
+}
+
+header .fa-solid{
+    font-size: 1em;
+}
+
+
+
+
+/* section = Home  */
+
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background: url(ahmed_sayed_1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+}
+
+.nt{
+    text-align: center;
+    position: sticky;
+    top: 70%;
+    left: 10%;
+}
+
+.nt h5 {
+    font-family: 'Holimount';
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #b90a0a;
+}
+
+
+
+.tit{
+    font-family: 'Poppins', sans-serif;
+    margin-top: 1%;
+    font-size: 1.1em;
+    font-weight:normal;
+    letter-spacing: 1px;
+}
+
+.wrapper{
+    top: 300px;
+    display: inline-block;  
+    margin-right: 45px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.wrapper :is(.btn, .link){
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35PX;
+    height: 35PX;
+    background-color: white;
+    color: #151515;
+    border-radius: 50%;
+}
+
+.btn{
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: outline .25s;
+}
+
+.wrapper i{
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.active .btn,
+.btn:hover{
+    outline: 5px solid #bb93fc;
+    outline-offset: -4px;
+}
+
+
+.item{
+    position: absolute;
+    list-style: none;
+    transition: transform .5s;
+    transition-delay: var(--d);
+}
+
+.instagram,
+.whatsapp,
+.linkedin{
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+.instagram:hover{
+    background-image: linear-gradient(to bottom right, #833ab4, #c13584);
+    color: white;
+}
+
+.whatsapp:hover{
+    background-color: #075e54;
+    color:white;
+}
+
+.linkedin:hover{
+    background-color: #007785;
+    color: white;
+}
+
+.wrapper.active .item:nth-child(1){
+    transform: translatex(-50px);
+}
+
+.wrapper.active .item:nth-child(2){
+    transform: translatey(45px);
+}
+
+.wrapper.active .item:nth-child(3){
+    transform: translatex(50px);
+}
+
+
+/* defult pages */
+
+
+#Portfolio{
+    background: url(ahmed_sayed_3.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#My-Story{
+    background: url(ahmed_sayed_4.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.tittle1{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 2.2em;
+    font-weight:800;
+    margin-bottom: 20px;
+}
+
+
+.tittle2{
+    display: flex;
+    justify-content: center;
+    color: #3a5cf4;
+    font-size: 2.2em;
+    font-weight:800;
+    margin: 35px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;  
+}
+
+
+.pages-p{
+    min-height: 100vh;
+    align-items: center;
+    text-align: center;
+}
+
+.pages-p .button2info a{
+    color: white;
+    border-radius: 50% ;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 1px 7px;
+    font-weight: 800;
+    transition: 0.9s ease;
+    
+}
+
+.button2info a:hover{
+    color: black;
+    background-color: rgb(168, 164, 164);
+    border-color: transparent;
+    transform: scale(1.1);
+}
+
+.button2home{
+    display: flex;
+    justify-content: center;
+}
+
+
+.button2home a{
+    cursor: pointer;
+    color: black;   
+    font-weight: 800;
+    transition: 0.4s ease;  
+    font-size: 1em;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 50%;
+    padding: 1.5px 6px 0 6px;
+}
+
+.button2home a:hover{
+    color: white;
+    background-color: black;
+}
+
+
+
+/* section = My Story  */
+
+
+.My-Story{
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background-color: white;
+}   
+
+
+.summery{
+    color: black;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 0 1%;
+    margin-bottom: 40px;
+}
+
+.boody{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    margin-bottom: 50px;
+}
+
+.skills-bar{
+    width: 50%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skills-bar .bar{
+    margin: 20px 0;
+}
+
+.skills-bar .bar:first-child{
+    margin-top: 0px;
+}
+
+.skills-bar .bar .infoo{
+    margin-bottom: 5px;
+}
+
+.skills-bar .bar .infoo span{
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+    100%{
+        opacity: 1;
+    }
+}
+
+.skills-bar .bar .progress-line{
+    width: 100%;
+    height: 10px;
+    position: relative;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    box-shadow: inset 0px 1px 1px rgba(0,0,0,0.05),
+                          0px 1px rgba(255,255,255,0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+.bar .progress-line span{
+    height: 100%;
+    width: 80%;
+    background: #6665ee;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }    
+}
+
+.progress-line.IT span{
+    width: 95%;
+}
+
+.progress-line.HTML span{
+    width: 90%;
+}
+
+.progress-line.javascript span{
+    width: 80%;
+}
+
+.progress-line.Excel span{
+    width: 97%;
+}
+
+.progress-line.Access span{
+    width: 85%;
+}
+
+.progress-line.Python span{
+    width: 50%;
+}
+
+.progress-line.Innovative span{
+    width: 95%;
+}
+
+.bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width:0px ;
+    border-right-width:0px ;
+    border-top-color: #000;
+    top: -10px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+
+.bar .progress-line span::after{
+    position: absolute;
+    right: 0;
+    top: -28px;
+    color: #fff;
+    background: #000;
+    font-size:  12px;
+    font-weight: 500;
+    padding: 1px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+    100%{
+        opacity: 1;
+    }
+}
+
+.progress-line.IT span::after{
+    content: "95%";
+}
+
+.progress-line.HTML span::after{
+    content: "90%";
+}
+
+.progress-line.javascript span::after{
+    content: "80%";
+}
+
+.progress-line.Excel span::after{
+    content: "97%";
+}
+
+.progress-line.Access span::after{
+    content: "85%";
+}
+
+.progress-line.Python span::after{
+    content: "50%";
+}
+
+.progress-line.Innovative span::after{
+    content: "95%";
+}
+
+
+
+
+.cv{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.cv a{
+    background-color: white;
+    border: 2px solid transparent;
+    color: #3a5cf4;
+    padding: 2px 15px;
+    border-radius: 15px;
+    font-weight:600;
+    border-color: #3a5cf4;
+}
+
+.cv a:hover{
+    color: white;
+    background-color: #3a5cf4;
+}
+.cv .fa-solid{
+    padding-left: 15px;
+}
+
+.social-box{
+    text-align: center;
+    margin: 5px 0;
+}
+
+
+
+.social-box ul{
+    display: flex;
+    justify-content: center;
+}
+
+.social-box ul li{
+    list-style: none;
+    margin: 0px 5px;
+}
+
+.social-box ul li .fab{
+    font-size: 1.2em;
+    line-height: 35px;
+    transition: .3s;
+    color: rgb(0, 0, 0);
+}
+
+.social-box ul li .fab:hover{
+    color: rgb(228, 225, 225);
+}
+
+.social-box ul li .fa-brands{
+    font-size: 1.2em;
+    line-height: 35px;
+    transition: .3s;
+    color: rgb(0, 0, 0);
+}
+
+.social-box ul li .fa-brands:hover{
+    color: rgb(228, 225, 225);
+}
+
+.social-box ul li .fa-regular{
+    font-size: 1.2em;
+    line-height: 35px;
+    transition: .3s;
+    color: rgb(0, 0, 0);
+}
+
+.social-box ul li .fa-regular:hover{
+    color: rgb(228, 225, 225);
+}
+
+.social-box ul li a{
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: transparent;
+    text-align: center;
+    transition: .7s;
+
+}
+
+.social-box ul li a:hover{
+    transform: translate(0,-10px);
+}
+
+.social-box ul li:nth-child(1) a:hover{
+    background-color: #e4405f;
+}
+
+.social-box ul li:nth-child(2) a:hover{
+    background-color: #007785;
+}
+
+.social-box ul li:nth-child(3) a:hover{
+    background-color: #075e54;
+}
+.social-box ul li:nth-child(4) a:hover{
+    background-color: #c71610;
+}
+
+
+
+/* section = Services  */
+
+#Services{
+    background: url(ahmed_sayed_2.jpg) no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.container{
+    max-width: 110rem; 
+    padding: 1.5rem;
+}
+
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2rem;
+}
+
+.card{
+    background: #262525;
+    color: #fff;
+    padding: 2rem;
+    overflow: hidden;
+    border-radius: 0. 8rem;
+    border-radius: 10%;
+}
+
+.card-title-large {
+    font-family: 'Poppins', sans-serif; 
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #5f5f5f;
+    white-space: nowrap;
+    transform: translateX(10rem);
+    transition: transform 2.5s;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+.card-title-small {
+    margin-bottom: .5rem;
+}
+.card-description {
+    font-size: 1.4rem; 
+    line-height: 1.5;
+}
+
+
+.card-cta {
+    width: 1rem;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    display:grid; 
+    place-items: center;
+    color: #0184ff;
+}
+
+.card:hover .card-cta {
+    color: #FFF;
+}
+
+.card:hover .card-cta .fa-solid {
+    font-size: 25px;
+}
+.card:hover .card-cta .fa-brands {
+    font-size: 25px;
+}
+
+.card:hover .card-title-large {
+    transform: translatex(-115%) ;
+    color: #fff;
+}
+
+.card.jop:hover{
+    background-color: #1da1f2;
+}
+.card.jop:hover h2 {
+    animation: services 2s linear infinite;
+}
+@keyframes services  {
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translatex(-100%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* section = Portfolio  */
+
+
+.Portfolio{
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background-color: white;
+    color: black;
+    text-align:end;
+}
+
+.Portfolio .content{
+    margin-top: 30px;
+}
+
+.p-card{
+    background-color: white;
+    border: 1px solid white;
+    min-height: 5em;
+    width:20em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15);
+    opacity: 50%;
+}
+
+.p-card:hover{
+    transform: scale(1.1);
+    opacity: 100%;
+}
+
+.p-card:hover .p-img{
+    opacity: 0.9;
+}
+
+.p-img img{
+    width: 100%;
+}
+
+.p-info{
+    padding: 1em;
+}
+
+.p-category{
+    font-size: 0.8em;
+    color: black;
+}
+
+.p-tittle{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    margin-top: 5px;
+}
+
+
+
+
+.pp-card{
+    background-color: black;
+    border: 1px solid white;
+    width:20em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 15);
+    opacity: 50%;
+    color: white;
+    text-align: center;
+}
+
+.pp-card:hover{
+    transform: scale(1.1);
+    opacity: 100%;
+}
+
+.pp-info{
+    padding: 40% 30%;
+}
+
+.pp-tittle{
+    display: flex;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.pp-card .fa-solid{
+    font-size: 1.9em;
+}
+
+
+
+.more-details{
+    color: #3a5cf4;
+    background-color: white;
+    border-color: transparent;
+    font-weight: 800;
+    font-size: 1.1em;
+}
+
+.more-details:hover{
+    color: #4518af;
+}
+
+.p-tittle .fa-solid{
+    font-weight: 800;
+    font-size: 1.3em;
+    color: #3a5cf4;
+    cursor: pointer;
+}
+
+.p-tittle .fa-solid:hover{
+    color: #4518af;
+}
+
+
+.vv1{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(50,50, 50, 1);
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.vv1 video{
+    max-width: 900px;
+    outline: none;
+    position: relative;
+}
+
+.vv1 .fa-solid{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #000;
+    font-size: 25px;
+    cursor: pointer;
+    color: rgb(197, 197, 197);
+}
+
+.vv1 .fa-solid:hover{
+    color: white;
+    transform: scale(1.1);
+}
+
+
+
+
+.img-slider .fa-times{
+    position: absolute;
+    top:10px;
+    right:15px;
+    font-size: 15px;
+    cursor: pointer;
+    color: rgb(228, 224, 224);
+    border-radius: 50% ;
+    padding: 2px 5px;
+    font-weight: 800;
+    transition: 0.9s ease;
+}
+
+
+.img-slider .fa-times:hover{
+    color: black;
+    background-color: rgb(194, 189, 189);
+    border-color: transparent;
+    transform: scale(1.1);
+    
+}
+
+
+.img-slider{
+    position: absolute;
+    bottom: -324%;
+    width: 900px;
+    height: 510px;
+    margin: 10px;
+    background: #1D212B;
+    transform: scale(0);
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+  }
+  
+  .img-slider .slide{
+    z-index: 1;
+    position: absolute;
+    width: 97%;
+    clip-path: circle(0% at 0 50%);
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .img-slider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 2s;
+    transition-property: clip-path;
+  }
+  
+  .img-slider .slide img{
+    z-index: 1;
+    width: 100%;
+    border-radius: 25px;
+  }
+  
+  .img-slider .navigation{
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: 37px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .img-slider .navigation .btn{
+    background: rgba(255, 255, 255, 0.685);
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .img-slider .navigation .btn.active{
+    background: #2c84c7;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  }
+
+
+  
+  @media (max-width: 820px){
+    .img-slider{
+      width: 600px;
+      height: 375px;
+      margin: 0px;
+    }
+    .img-slider .slide{
+        margin:0 7px;
+      }
+  
+    .img-slider .navigation{
+      bottom: 10px;
+    }
+  
+    .img-slider .navigation .btn{
+      width: 10px;
+      height: 10px;
+      margin: 8px;
+    }
+    .img-slider .fa-times{
+        top: 7px;
+        font-size: 10px;
+    }
+
+  }
+  
+  @media (max-width: 620px){
+    .img-slider{
+      width: 400px;
+      height: 250px;
+      margin: 0px;
+    }
+    .img-slider .slide{
+        margin: 0 5px;
+      }
+  
+    .img-slider .navigation{
+      bottom: 5px;
+    }
+  
+    .img-slider .navigation .btn{
+      width: 8px;
+      height: 8px;
+      margin: 6px;
+    }
+    .img-slider .fa-times{
+        top: 4px;
+        font-size: 7px;
+    }
+  }
+  
+  @media (max-width: 420px){
+    .img-slider{
+      width: 320px;
+      height: 200px;
+      margin: 0px;
+    }
+    .img-slider .slide{
+        margin: 0 5px;
+      }
+    .img-slider .navigation{
+      bottom: 2px;
+    }
+    .img-slider .fa-times{
+        top: 4px;
+        font-size: 7px;
+    }
+  }
+        
+
+
+/* section = Footer  */
+
+
+.footer{
+    background-color: #353333;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.f-name{
+    font-size: 1em;
+    color: white;
+    margin: 5px 0;
+}
+
+
+
+footer li{
+    display: inline-block;
+    margin: 10px;
+    list-style: none;
+}
+
+
+.footer .footer-icons a{
+    margin-top: 10px;
+    background-color:transparent ;
+    color: white;
+    padding: 10px;
+    border-radius: 100px;
+    display: flex;
+    font-size: 15px;
+    border:2px solid white;
+    transition: 0.1s ease;
+}
+
+.footer .footer-icons a:hover{
+    color: black;
+    background-color: rgb(199, 197, 197);
+    border-color: transparent;
+    transform: scale(1.1);
+}
+
+.footer .footer-list a{
+    background-color:transparent ;
+    color: rgb(209, 209, 209);
+    display: flex;
+    font-size: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.footer .footer-list a::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s linear;
+    background-color: rgb(160, 160, 160);
+}
+
+.footer .footer-list a:hover::after{
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+.footer .footer-list a:hover{
+    color: rgb(194, 194, 194);
+}
+
+
+/* section = Media Screen  */
+
+
+
+@media (max-width:1040px){
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .vv1 video{
+        max-width: 90%;
+    }
+    .skills-bar{
+        width: 100%;
+    }
+    .dropdown-list-item{
+        padding: 2px 0;
+    }
+    .main{
+        background: url(ahmed_sayed_1_1.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+    }
+    #Services{
+        background: url(ahmed_sayed_2_2.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    #Portfolio{
+        background: url(ahmed_sayed_3_3.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    #My-Story{
+        background: url(ahmed_sayed_4_4.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+         .main{
+        background: url(ahmed_sayed_1_1.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+        width: 100%;
+        min-height: 100vh;
+    }
+    #Services{
+        background: url(ahmed_sayed_2_2.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        min-height: 100vh;
+    }
+    #Portfolio{
+        background: url(ahmed_sayed_3_3.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        min-height: 100vh;
+    }
+    #My-Story{
+        background: url(ahmed_sayed_4_4.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        min-height: 100vh;
+    }   
+}
+
+
+@media only screen 
+    and (device-width: 390px) 
+    and (device-height: 844px) 
+    and (-webkit-device-pixel-ratio: 3) { 
+         .main{
+        background: url(ahmed_sayed_1_1.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+        color: white;
+        width: 100%;
+        min-height: 100vh;
+    }
+    #Services{
+        background: url(ahmed_sayed_2_2.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+        width: 100%;
+        min-height: 100vh;
+    }
+    #Portfolio{
+        background: url(ahmed_sayed_3_3.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+        width: 100%;
+        min-height: 100vh;
+    }
+    #My-Story{
+        background: url(ahmed_sayed_4_4.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+        width: 100%;
+        min-height: 100vh;
+    }   
+}
+
+@media screen and (max-width:600px){
+         .main{
+        background: url(ahmed_sayed_1_1.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        color: white;
+        width: 100%;
+        min-height: 100vh;
+    }
+    #Services{
+        background: url(ahmed_sayed_2_2.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        min-height: 100vh;
+    }
+    #Portfolio{
+        background: url(ahmed_sayed_3_3.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        min-height: 100vh;
+    }
+    #My-Story{
+        background: url(ahmed_sayed_4_4.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        min-height: 100vh;
+    }   
+}
+
+
+@media (max-width:901px){
+    .vv1 video{
+        max-width: 90%;
+    }
+}
+
+@media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:412px){
+    body{
+        font-size: 10x;
+    }
+    header.active{
+        padding: 2px 100px;
+    }
+}
