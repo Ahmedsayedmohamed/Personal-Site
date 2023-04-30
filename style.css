@@ -18,8 +18,18 @@
 
 
 a {
-    text-decoration: none;  
+    text-decoration: none;
+    color: inherit;  
 }
+
+ul{
+    list-style: none;
+}
+
+a, label{
+    -webkit-tap-highlight-color: transparent;
+}
+
 
 section{
     padding: 2em 1em;
@@ -132,91 +142,141 @@ header .fa-solid{
 .tit{
     font-family: 'Poppins', sans-serif;
     margin-top: 1%;
+    margin-bottom: 4%;
     font-size: 1.1em;
     font-weight:normal;
     letter-spacing: 1px;
 }
 
-.wrapper{
-    top: 300px;
-    display: inline-block;  
-    margin-right: 45px;
-    margin-bottom: 40px;
-    margin-top: 10px;
+
+.share input{
+    display: none;
 }
 
-.wrapper :is(.btn, .link){
-    display: inline-flex;
+.share{
+    position: relative;
+    width: 380px;
+    height: auto;
+}
+
+.share label{
+    position: absolute;
+    font-size: 1.5em;
+    width: 50px;
+    height: 50px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 35PX;
-    height: 35PX;
-    background-color: white;
-    color: #151515;
+    background: linear-gradient(45deg, #e04a2c, #dd2476);
     border-radius: 50%;
-}
-
-.btn{
-    position: absolute;
-    border: none;
     cursor: pointer;
     z-index: 10;
-    transition: outline .25s;
+    color: white ;
+    
+    top: 13px;
+    left: 50%;
+    margin-left: -30px;
+    transition: opacity .3s, transform .3s , box-shadow .2s;
+    transition-timing-function: cubic-bezier(0.63, -0.55, 0.38, 1.7);
 }
 
-.wrapper i{
-    font-size: 17px;
-    font-weight: 400;
+.share input:checked ~ label{
+    opacity: 0;
+    transform: scale(.8);
+    box-shadow: 0 0 0 30px rgb(0 0 0 / 10%);
+    transition: opacity .2 1s, transform 1s , box-shadow 1s;
 }
 
-.active .btn,
-.btn:hover{
-    outline: 5px solid #bb93fc;
-    outline-offset: -4px;
+.share ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 25px;
+    margin: auto;
+    border-radius: 40px;
+    background-color: rgb(255 255 255 / 50%);
+
+    width: 100px;
+    opacity: 0;
+    transition: width .3s, opacity .2s;
+}
+
+.share input:checked ~ ul {
+    width: 380px;
+    opacity: 1;
+    transition: width .3s .3s , opacity .2s 1s;
 }
 
 
-.item{
-    position: absolute;
-    list-style: none;
-    transition: transform .5s;
-    transition-delay: var(--d);
-}
-
-.instagram,
-.whatsapp,
-.linkedin{
-    padding: 15px;
-    cursor: pointer;
+.share ul li a{
+    font-size: 1.3em;
+    width: 46px;
+    height: 46px;
+    background-color: rgb(129, 238, 147);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    transition: all .3s ease-in-out;
+    color: white;
+    transition: transform .3s;
 }
 
-.instagram:hover{
+
+.share ul li:where(:nth-child(1), :nth-child(2)){
+    transform: translateX(80px);
+}
+
+.share ul li:where(:nth-child(4), :nth-child(5)){
+    transform: translateX(-80px);
+}
+
+.share ul li{
+    transition: transform .3s 1s cubic-bezier(0.63, -0.55, 0.38, 1.7);
+}
+
+.share input:checked ~ ul li {
+    transform: translatex(0);
+}
+
+
+
+.share ul li.whatsapp a{
+    background-color: #25d366;
+    box-shadow: #25d366  0 15px 18px -8px;
+}
+
+.share ul li.instagram a{
     background-image: linear-gradient(to bottom right, #833ab4, #c13584);
-    color: white;
+    box-shadow: #c13584 0 15px 18px -8px;
 }
 
-.whatsapp:hover{
-    background-color: #075e54;
-    color:white;
+.share ul li.close a{
+    background-color: black;
+    box-shadow: black 0 15px 18px -8px;
 }
 
-.linkedin:hover{
+
+.share ul li.linkedin a{
     background-color: #007785;
-    color: white;
+    box-shadow: #007785 0 15px 18px -8px;
 }
 
-.wrapper.active .item:nth-child(1){
-    transform: translatex(-50px);
+.share ul li.github  a{
+    background-color: black;
+    box-shadow: black 0 15px 18px -8px;
 }
 
-.wrapper.active .item:nth-child(2){
-    transform: translatey(45px);
+.share ul li a:hover{
+    transform: translateY(-10px);
 }
 
-.wrapper.active .item:nth-child(3){
-    transform: translatex(50px);
+.share ul li a i {
+    transition: transform .5s;
+}
+
+.share ul li a:hover i {
+    transform:  rotate(360deg);
 }
 
 
@@ -422,6 +482,18 @@ header .fa-solid{
 }
 
 .progress-line.Python span{
+    width: 70%;
+}
+
+.progress-line.GUI span{
+    width: 80%;
+}
+
+.progress-line.numpy span{
+    width: 50%;
+}
+
+.progress-line.pandas span{
     width: 50%;
 }
 
@@ -486,6 +558,18 @@ header .fa-solid{
 }
 
 .progress-line.Python span::after{
+    content: "70%";
+}
+
+.progress-line.GUI span::after{
+    content: "80%";
+}
+
+.progress-line.numpy span::after{
+    content: "50%";
+}
+
+.progress-line.pandas span::after{
     content: "50%";
 }
 
